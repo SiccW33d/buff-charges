@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<UserConfig>
+<Group id="buffcharges" displayName="Mods.BuffCharges">
+<PresetsArray>
+<Preset id="0" displayName="Defaults">
+<Entry varId="buffcharges_Aard" value="15"/>
+<Entry varId="buffcharges_Yrden" value="15"/>
+<Entry varId="buffcharges_Igni" value="15"/>
+<Entry varId="buffcharges_Quen" value="15"/>
+<Entry varId="buffcharges_Axii" value="15"/>
+<Entry varId="buffcharges_Grindstone" value="100"/>
+<Entry varId="buffcharges_Workbench" value="25"/>
+</Preset>
+</PresetsArray>
+<VisibleVars>
+<Var id="buffcharges_Aard" displayName="buffcharges_Aard" displayType="SLIDER;5;150;145"/>
+<Var id="buffcharges_Yrden" displayName="buffcharges_Yrden" displayType="SLIDER;5;150;145"/>
+<Var id="buffcharges_Igni" displayName="buffcharges_Igni" displayType="SLIDER;5;150;145"/>
+<Var id="buffcharges_Quen" displayName="buffcharges_Quen" displayType="SLIDER;5;150;145"/>
+<Var id="buffcharges_Axii" displayName="buffcharges_Axii" displayType="SLIDER;5;150;145"/>
+<Var id="buffcharges_Grindstone" displayName="buffcharges_Grindstone" displayType="SLIDER;40;1000;960"/>
+<Var id="buffcharges_Workbench" displayName="buffcharges_Workbench" displayType="SLIDER;10;250;240"/>
+</VisibleVars>
+</Group>
+</UserConfig>
