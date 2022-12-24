@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<UserConfig>   
+    <Group id="popbc" displayName="Mods.gameplay.PoPBC">
+		<PresetsArray>
+			<Preset id="0" displayName="Defaults">
+				<Entry varId="popbc_Aard" value="15"/>
+				<Entry varId="popbc_Yrden" value="15"/>
+				<Entry varId="popbc_Igni" value="15"/>
+				<Entry varId="popbc_Quen" value="15"/>
+				<Entry varId="popbc_Axii" value="15"/>
+			</Preset>
+		</PresetsArray>
+        <VisibleVars>		
+            <Var id="popbc_Aard" displayName="popbc_Aard" displayType="SLIDER;5;150;145"/>
+            <Var id="popbc_Yrden" displayName="popbc_Yrden" displayType="SLIDER;5;150;145"/>
+            <Var id="popbc_Igni" displayName="popbc_Igni" displayType="SLIDER;5;150;145"/>
+            <Var id="popbc_Quen" displayName="popbc_Quen" displayType="SLIDER;5;150;145"/>
+            <Var id="popbc_Axii" displayName="popbc_Axii" displayType="SLIDER;5;150;145"/>
+        </VisibleVars>
+    </Group>
+</UserConfig>
