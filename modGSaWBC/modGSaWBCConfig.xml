@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<UserConfig>   
+    <Group id="gsawbc" displayName="Mods.GSaWBC">
+		<PresetsArray>
+			<Preset id="0" displayName="Defaults">
+				<Entry varId="gsawbc_Grindstone" value="100"/>
+				<Entry varId="gsawbc_Workbench" value="25"/>
+			</Preset>
+		</PresetsArray>
+        <VisibleVars>		
+            <Var id="gsawbc_Grindstone" displayName="gsawbc_Grindstone" displayType="SLIDER;40;1000;960"/>
+            <Var id="gsawbc_Workbench" displayName="gsawbc_Workbench" displayType="SLIDER;10;250;240"/>
+        </VisibleVars>
+    </Group>
+</UserConfig>
