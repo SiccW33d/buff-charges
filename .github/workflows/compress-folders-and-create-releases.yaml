@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate SemVer tag
-        uses: actions/labeler@v1
-        id: labeler
+        uses: actions/create-semver@v1
+        id: semver
         with:
           prefix: v
           version_file: ./.version
@@ -37,8 +37,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.labeler.outputs.version }}
-          release_name: Release ${{ steps.labeler.outputs.version }}
+          tag_name: ${{ steps.semver.outputs.version }}
+          release_name: Release ${{ steps.semver.outputs.version }}
           draft: false
           prerelease: false
           artifact_names: |
