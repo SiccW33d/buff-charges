@@ -1,0 +1,13 @@
+;meta[language=en]
+; id      |key(hex)|key(str)| text
+2117383000|        |panel_mods|Mods
+2117383001|        |panel_BuffCharges|Buff Charges
+2117383002|        |preset_Mods_BuffCharges|Buff Charges
+2117383003|        |preset_value_Defaults|Defaults
+2117383004|        |option_buffcharges_Aard|Aard Charges
+2117383005|        |option_buffcharges_Yrden|Yrden Charges
+2117383006|        |option_buffcharges_Igni|Igni Charges
+2117383007|        |option_buffcharges_Quen|Quen Charges
+2117383008|        |option_buffcharges_Axii|Axii Charges
+2117383009|        |option_buffcharges_Grindstone|Grindstone Charges
+2117383010|        |option_buffcharges_Workbench|Workbench Charges
