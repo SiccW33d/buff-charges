@@ -26,6 +26,8 @@ jobs:
     needs: compress
     runs-on: ubuntu-latest
     steps:
+      # Check out the repository to the virtual machine
+      - uses: actions/checkout@v2
       # Manually increment the patch version number based on the number of commits
       - name: Get commit count
         run: |
