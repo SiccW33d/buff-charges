@@ -22,19 +22,3 @@ jobs:
             Buff Charges.zip
             Grindstone and Workbench Charges Only (modGSaWBC).zip
             Places of Power Charges Only (modPoPBC).zip
-  create-release:
-    needs: compress
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-          artifact_paths: |
-            Buff Charges.zip
-            Grindstone and Workbench Charges Only (modGSaWBC).zip
-            Places of Power Charges Only (modPoPBC).zip
