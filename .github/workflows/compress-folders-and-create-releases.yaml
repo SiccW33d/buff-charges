@@ -26,12 +26,19 @@ jobs:
     needs: compress
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-release@v1
+      - name: Generate SemVer tag
+        uses: actions/semver@v2
+        id: semver
+        with:
+          prefix: v
+          version_file: ./.version
+      - name: Create release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: ${{ steps.semver.outputs.version }}
+          release_name: Release ${{ steps.semver.outputs.version }}
           draft: false
           prerelease: false
           artifact_names: |
