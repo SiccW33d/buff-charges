@@ -1,0 +1,29 @@
+name: compress-folders-and-create-releases
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          zip -r "Buff Charges.zip" modBuffCharges
+          zip -r "Grindstone and Workbench Charges Only (modGSaWBC).zip" modGSaWBC
+          zip -r "Places of Power Charges Only (modPoPBC).zip" modPoPBC
+      - name: create-releases
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+          assets: |
+            "Buff Charges.zip"
+            "Grindstone and Workbench Charges Only (modGSaWBC).zip"
+            "Places of Power Charges Only (modPoPBC).zip"
