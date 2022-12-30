@@ -14,8 +14,19 @@ jobs:
           zip -r "Buff Charges.zip" modBuffCharges
           zip -r "Grindstone and Workbench Charges Only (modGSaWBC).zip" modGSaWBC
           zip -r "Places of Power Charges Only (modPoPBC).zip" modPoPBC
-      - name: create-releases
-        uses: actions/create-release@v1
+      - name: upload-artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: mod-zip-files
+          path: |
+            Buff Charges.zip
+            Grindstone and Workbench Charges Only (modGSaWBC).zip
+            Places of Power Charges Only (modPoPBC).zip
+  create-release:
+    needs: compress
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -23,7 +34,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-          assets: |
-            "Buff Charges.zip"
-            "Grindstone and Workbench Charges Only (modGSaWBC).zip"
-            "Places of Power Charges Only (modPoPBC).zip"
+          artifact_paths: |
+            Buff Charges.zip
+            Grindstone and Workbench Charges Only (modGSaWBC).zip
+            Places of Power Charges Only (modPoPBC).zip
